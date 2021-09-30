@@ -62,7 +62,7 @@ const Pagination = ({ list, updateList }) => {
           ...
         </button>
       )}
-      {current === lastPage && lastPage > 1 && (
+      {current === lastPage && lastPage > 2 && (
         <button
           className="page"
           disabled={current === lastPage - 1}
