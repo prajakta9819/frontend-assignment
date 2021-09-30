@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #f0b7aa, #ee8972);
+  /* Incase gradient fails */
+  background: #f0b7aa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header > h4 {
+  margin-right: 20px;
+  padding-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background-color: whitesmoke;
+  display: flex;
+  border-bottom: 1px solid gray;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.favorite-button,
+.delete-button,
+.button-sort {
+  border: 1px solid gray;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 10px;
+}
+
+.favorite-button:hover,
+.delete-button:hover {
+  background: #e9d7d2;
+}
+
+.favorite-button > .ri-star-fill {
+  font-size: 16px;
+}
+
+.favorite-button {
+  margin-right: 8px;
+}
+
+.info-wrapper {
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid gray;
+}
+
+.info > h4,
+.info > p {
+  margin: 0px;
+}
+
+input {
+  padding: 10px 0px 10px 5px;
+  width: 100%;
+}
+
+/* modal styling */
+.modal {
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  align-items: center;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(to right, #f8eeec, #ffffff);
+}
+
+.modal-yes,
+.modal-no {
+  font-size: 16px;
+  width: 75px;
+}
+
+.modal-yes {
+  margin-left: 25%;
+  margin-right: 15px;
+}
+
+.modal-yes:hover,
+.modal-no:hover {
+  background: #e9d7d2;
+}
+
+.button-sort:hover {
+  background: #e9d7d2;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  padding: 50px 0px;
+  width: 100%;
+}
+
+.input-container > input {
+  width: 100%;
+  max-width: 400px;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.add-input {
+  box-sizing: border-box;
+}
+
+.page {
+  background: cornflowerblue;
+  border: 1px solid lightblue;
+  padding: 10px;
+  margin-top: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.disabled {
+  background: lightgray;
+  color: gray;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  background: #4365bd;
+}
+
+.prev {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.next {
+  border-radius: 0px 4px 4px 0px;
 }
